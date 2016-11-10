@@ -56,7 +56,6 @@ int main(int argc, const char * argv[]) {
 
     printTopN(topN.begin(), 10);
     
-    
     inputFile.close();
     
     
