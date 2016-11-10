@@ -46,9 +46,10 @@ void printTopN(multimap<int, string, bool(*)(int,int)>::iterator top3It, const i
 }
 
 int main(int argc, const char * argv[]) {
-    ifstream inputFile;
-    inputFile.open("/Users/szalmaf/Projects/C++_Find3MostCommonWordsInText/C++_Find3MostCommonWordsInText/text.txt");
     
+    ifstream inputFile;
+    inputFile.open("/Users/szalmaf/Data/example_text.txt");
+    inputFile.close();
     
     auto dict = createWordMap(inputFile);
     
@@ -56,7 +57,6 @@ int main(int argc, const char * argv[]) {
 
     printTopN(topN.begin(), 10);
     
-    inputFile.close();
     
     
     return 0;
